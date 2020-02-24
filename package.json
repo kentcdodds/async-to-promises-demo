@@ -1,0 +1,24 @@
+{
+  "name": "async-to-promises-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:promises && npm run build:regenerator",
+    "build:promises": "babel --config-file ./promises.babelrc.json --out-file dist/promises.js --source-maps true src/promises.js",
+    "build:regenerator": "babel --config-file ./regenerator.babelrc.json --out-file dist/regenerator.js --source-maps true src/regenerator.js"
+  },
+  "keywords": [],
+  "author": "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/plugin-transform-regenerator": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/runtime": "^7.8.4",
+    "babel-plugin-transform-async-to-promises": "^0.8.15",
+    "regenerator-runtime": "^0.13.3"
+  }
+}
